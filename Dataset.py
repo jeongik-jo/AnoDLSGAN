@@ -1,6 +1,6 @@
 import os
 import tensorflow as tf
-import tensorflow.keras as kr
+from tensorflow import keras as kr
 import HyperParameters as hp
 import tensorflow_datasets as tfds
 import numpy as np

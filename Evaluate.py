@@ -1,4 +1,4 @@
-import tensorflow.keras as kr
+from tensorflow import keras as kr
 import tensorflow as tf
 import tensorflow_probability as tfp
 import HyperParameters as hp

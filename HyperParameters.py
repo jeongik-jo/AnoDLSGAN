@@ -14,7 +14,7 @@ ood_datasets = ['mnist_corrupted/shot_noise', 'mnist_corrupted/impulse_noise', '
                 'fashion_mnist', 'kmnist']
 
 ood_intensities = [0.1, 1.0]
-latent_vector_dim = 256
+latent_vector_dim = 64
 
 train_gan = True
 train_autoencoder = False

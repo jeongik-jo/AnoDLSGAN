@@ -11,7 +11,7 @@ id_dataset = 'mnist'
 ood_datasets = ['mnist_corrupted/shot_noise', 'mnist_corrupted/impulse_noise', 'mnist_corrupted/glass_blur',
                 'mnist_corrupted/motion_blur', 'mnist_corrupted/stripe', 'mnist_corrupted/fog',
                 'mnist_corrupted/spatter', 'mnist_corrupted/dotted_line', 'mnist_corrupted/zigzag',
-                'fashion_mnist', 'kmnist']
+                'mnist_corrupted/canny_edges', 'fashion_mnist', 'kmnist']
 
 ood_intensities = [0.1, 1.0]
 latent_vector_dim = 256

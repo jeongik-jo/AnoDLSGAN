@@ -17,8 +17,7 @@ def train(encoder: Models.Encoder, decoder: Models.Decoder, svm: Models.Svm, dat
         latent_vectors = hp.latent_dist_func(batch_size)
 
         if hp.is_dls:
-            latent_scale_vectors = tf.sqrt(tf.cast(hp.latent_vector_dim, dtype='float32')
-                                          * decoder.latent_var_trace / tf.reduce_sum(decoder.latent_var_trace))[tf.newaxis]
+            latent_scale_vectors = tf.sqrt(tf.cast(hp.latent_vector_dim, dtype='float32') * latent_var_trace / tf.reduce_sum(latent_var_trace))[tf.newaxis]
         else:
             latent_scale_vectors = tf.ones([1, hp.latent_vector_dim])
         fake_images = decoder(latent_vectors * latent_scale_vectors)

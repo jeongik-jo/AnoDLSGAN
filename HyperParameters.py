@@ -26,6 +26,7 @@ if train_gan:
     is_dls = True
     reg_weight = 0.1
     enc_weight = 1.0
+    use_logvar = False
     latent_var_decay_rate = 0.999
     latent_dist_func = lambda batch_size: tf.random.normal([batch_size, latent_vector_dim])
 

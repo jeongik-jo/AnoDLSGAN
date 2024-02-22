@@ -31,8 +31,8 @@ class Decoder(object):
 class Encoder(object):
     def build_model(self):
         input_image = kr.Input([hp.image_resolution, hp.image_resolution, 1])
-        adv_value, feature_vector = Layers.Encoder()(input_image)
-        return kr.Model(input_image, [adv_value, feature_vector])
+        adv_value, latent_vector, latent_logvar = Layers.Encoder()(input_image)
+        return kr.Model(input_image, [adv_value, latent_vector, latent_logvar])
 
     def __init__(self):
         self.model = self.build_model()

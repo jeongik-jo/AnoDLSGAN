@@ -36,8 +36,10 @@ def main():
     if hp.train_gan:
         if hp.is_dls:
             file_name = 'DLSGAN.txt'
-        else:
+        elif hp.use_logvar:
             file_name = 'InfoGAN.txt'
+        else:
+            file_name = 'MSEGAN.txt'
     elif hp.train_autoencoder:
         file_name = 'Autoencoder.txt'
     elif hp.train_classifier:
